@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projet1.css">
+    <title>Memory Masters</title>
+    
+</head>
+<body>
+    <div class="main" id="main">
+        <h1>Memory Masters</h1>
+        <p class="tagline">Your memory is your weopon <br>Ready to fight  </p>
+         <div> <img src="/photo/img3.jpg" alt="" width="30px"></div>
+       
+
+        <a href="#" class="start-btn">Start Game</a>
+        <br>
+        <button class="rules-btn" onclick="toggleRules()">Game Rules</button>
+    </div>
+
+    <div id="rulesContainer">
+        <h2>How to Play</h2>
+        <p>Memory Masters is a captivating card matching game that challenges your memory and concentration. Follow these simple rules to become a true Memory Master :</p>
+        
+        <ul>
+            <li>Cards are placed face down in a grid pattern.</li>
+            <li>On each turn, flip two cards to reveal their hidden symbols.</li>
+            <li>If the two cards match, you keep them and gain points!</li>
+            <li>If they don't match, both cards will flip back face down.</li>
+            <li>Try to remember the position of each card you've seen.</li>
+            <li>The game ends when all pairs have been matched.</li>
+        </ul>
+
+    </div>
+
+    <div id="primary">
+        <header>
+            <h1 class="game-title">JavaScript Memory Game</h1>
+            <p class="game-subtitle">Match cards to learn JavaScript concepts</p>
+        </header>
+    
+        <div class="stats-container">
+            <div class="stat-card">
+                <p class="stat-title">Time</p>
+                <p class="stat-value" id="timer">00:00</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-title">Moves</p>
+                <p class="stat-value" id="moves">0</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-title">Pairs</p>
+                <p class="stat-value"><span id="pairs">0</span>/<span id="total-pairs">6</span></p>
+            </div>
+        </div>
+    
+
+    <div class="level-indicator">
+        Level <span id="current-level">1</span>: <span id="level-title">JavaScript Variables</span>
+    </div>
+    
+    <div class="game-container">
+        <div class="cards-grid" id="cards-grid"></div>
+        
+        <div class="buttons-container">
+            <button class="btn-secondary" id="restart-btn">Restart Level</button>
+            <button class="btn-primary" id="next-level-btn" disabled>Next Level</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="level-complete-modal">
+        <div class="modal-content">
+            <h2 class="modal-title">Level Complete!</h2>
+            <p class="modal-text">Great job! You've completed Level <span id="completed-level">1</span>.</p>
+            
+            <div class="modal-stats">
+                <div class="modal-stat">
+                    <p class="modal-stat-label">Time</p>
+                    <p class="modal-stat-value" id="modal-time">00:00</p>
+                </div>
+                <div class="modal-stat">
+                    <p class="modal-stat-label">Moves</p>
+                    <p class="modal-stat-value" id="modal-moves">0</p>
+                </div>
+            </div>
+            
+            <div class="modal-buttons">
+                <button class="btn-secondary" id="modal-restart-btn">Restart Level</button>
+                <button class="btn-primary" id="modal-next-btn">Next Level</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="game-complete-modal">
+        <div class="modal-content">
+            <h2 class="modal-title">Congratulations!</h2>
+            <p class="modal-text">You've mastered all JavaScript concepts!</p>
+            
+            <div class="modal-stats">
+                <div class="modal-stat">
+                    <p class="modal-stat-label">Total Time</p>
+                    <p class="modal-stat-value" id="total-time">00:00</p>
+                </div>
+                <div class="modal-stat">
+                    <p class="modal-stat-label">Total Moves</p>
+                    <p class="modal-stat-value" id="total-moves">0</p>
+                </div>
+            </div>
+            
+            <div class="modal-buttons">
+                <button class="btn-primary" id="play-again-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="projet1.js">
+        
+    </script>
+</body>
+</html>
